@@ -1,31 +1,32 @@
-## Usage
+## Penggunaan
 
-To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
+**pertama**
+jangan lupa install dan jalankan docker pada laptop/pc, lalu clone folder github : `git clone https://github.com/NuryonoBroadway/new_posty.git`
+**kedua**
+silahkan pull docker berikut: (optional)
 
-Next, navigate in your terminal to the directory you cloned this, and spin up the containers for the web server by running `docker-compose up -d --build site`.
+- `docker pull karakuzen/site-195410096`
+- `docker pull karakuzen/php-195410096`
 
-After that completes, follow the steps from the [src/README.md](src/README.md) file to get your Laravel project added in (or create a new blank one).
+perintah kedua bersifat optional karena docker-compose akan pull image dengan sendirinya jika image tidak ada pada laptop/pc,
 
-Bringing up the Docker Compose network with `site` instead of just using `up`, ensures that only our site's containers are brought up at the start, instead of all of the command containers as well. The following are built for our web server, with their exposed ports detailed:
+**ketiga**
+choose directory ke new_posty `cd new_posty`
 
+##up
+up docker-compose, perintah **up** adalah menjalankan perintah untuk membuat container, networks, image, volumes yang tertera pada `docker-compose.yml`. `docker-compose up -d --build site`,  **-d** adalah detach, menjalankan container di background, lalu mencetak nama container baru. **--build** membuat image sebelum memulai container.
+
+nama container yang berjalan berserta port:
 - **nginx** - `:8080`
 - **mysql** - `:3306`
 - **php** - `:9000`
 
-Three additional containers are included that handle Composer, NPM, and Artisan commands *without* having to have these platforms installed on your local computer. Use the following command examples from your project root, modifying them to fit your particular use case.
+dikarenakan web based on laravel, maka ada 3 komponen utama yang mungkin akan berguna dalam edit web yaitu :
+- `docker-compose run --rm composer update` => update composer
+- `docker-compose run --rm npm run dev` => npm run dev : kompilasi untuk development
+- `docker-compose run --rm artisan migrate` => untuk migrate table ke database, dalam web ini berbasis mysql
 
-- `docker-compose run --rm composer update`
-- `docker-compose run --rm npm run dev`
-- `docker-compose run --rm artisan migrate` 
+- `docker-compose run --rm ....` => `--rm` berfungsi untuk menghapus container setelah run, misal kita sudah run untuk migrasi table kedatabase, maka secara otomatis setelah selesai container artisan akan hilang atau terhapus, karena terdapat option `--rm`.
 
-## Persistent MySQL Storage
-
-By default, whenever you bring down the Docker network, your MySQL data will be removed after the containers are destroyed. If you would like to have persistent data that remains after bringing containers down and back up, do the following:
-
-1. Create a `mysql` folder in the project root, alongside the `nginx` and `src` folders.
-2. Under the mysql service in your `docker-compose.yml` file, add the following lines:
-
-```
-volumes:
-  - ./mysql:/var/lib/mysql
-```
+##down
+down berfungsi untuk menghentikan proses container dan menhapus container, networks, volumes, dan image yang dibuat oleh `up`
