@@ -6,9 +6,6 @@ networks:
 services:
   site:
     image: karakuzen/site-195410096:latest
-    # build:
-    #   context: .
-    #   dockerfile: nginx.dockerfile
     container_name: nginx
     ports:
       - "8080:80"
@@ -41,9 +38,6 @@ services:
 
   php:
     image: karakuzen/php-195410096:latest
-    # build:
-    #   context: .
-    #   dockerfile: php.dockerfile
     container_name: php
     volumes:
       - ./src:/var/www/html:delegated
