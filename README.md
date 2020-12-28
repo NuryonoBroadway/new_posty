@@ -1,9 +1,11 @@
 ## Penggunaan
 
 - **pertama**
+
 jangan lupa install dan jalankan docker pada laptop/pc, lalu clone folder github : `git clone https://github.com/NuryonoBroadway/new_posty.git`
 
 - **kedua**
+
 silahkan pull docker berikut: (optional)
 
 `docker pull karakuzen/site-195410096`
@@ -12,6 +14,7 @@ silahkan pull docker berikut: (optional)
 perintah kedua bersifat optional karena docker-compose akan pull image dengan sendirinya jika image tidak ada pada laptop/pc,
 
 - **ketiga**
+
 choose directory ke new_posty `cd new_posty`
 
 ## up
