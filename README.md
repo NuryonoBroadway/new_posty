@@ -27,7 +27,7 @@ dikarenakan web based on laravel, maka ada 3 komponen utama yang mungkin akan be
 - `docker-compose run --rm npm run dev` => npm run dev : kompilasi untuk development
 - `docker-compose run --rm artisan migrate` => untuk migrate table ke database, dalam web ini berbasis mysql
 
-- `docker-compose run --rm ....` => `--rm` berfungsi untuk menghapus container setelah run, misal kita sudah run untuk migrasi table kedatabase, maka secara otomatis setelah selesai container artisan akan hilang atau terhapus, karena terdapat option `--rm`.
+`docker-compose run --rm ....` => `--rm` berfungsi untuk menghapus container setelah run, misal kita sudah run untuk migrasi table kedatabase, maka secara otomatis setelah selesai container artisan akan hilang atau terhapus, karena terdapat option `--rm`.
 
 ## down
 
