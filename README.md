@@ -13,7 +13,8 @@ perintah kedua bersifat optional karena docker-compose akan pull image dengan se
 **ketiga**
 choose directory ke new_posty `cd new_posty`
 
-##up
+## up
+
 up docker-compose, perintah **up** adalah menjalankan perintah untuk membuat container, networks, image, volumes yang tertera pada `docker-compose.yml`. `docker-compose up -d --build site`,  **-d** adalah detach, menjalankan container di background, lalu mencetak nama container baru. **--build** membuat image sebelum memulai container.
 
 nama container yang berjalan berserta port:
@@ -28,5 +29,6 @@ dikarenakan web based on laravel, maka ada 3 komponen utama yang mungkin akan be
 
 - `docker-compose run --rm ....` => `--rm` berfungsi untuk menghapus container setelah run, misal kita sudah run untuk migrasi table kedatabase, maka secara otomatis setelah selesai container artisan akan hilang atau terhapus, karena terdapat option `--rm`.
 
-##down
+## down
+
 down berfungsi untuk menghentikan proses container dan menhapus container, networks, volumes, dan image yang dibuat oleh `up`
