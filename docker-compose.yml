@@ -34,7 +34,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     networks:
-      - laravel	
+      - laravel
 
   php:
     image: karakuzen/php-195410096:latest
