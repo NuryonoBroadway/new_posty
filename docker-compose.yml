@@ -70,9 +70,7 @@ services:
     entrypoint: ['npm']
 
   artisan:
-    build:
-      context: .
-      dockerfile: php.dockerfile
+    image: karakuzen/php-195410096
     container_name: artisan
     volumes:
       - ./src:/var/www/html:delegated
