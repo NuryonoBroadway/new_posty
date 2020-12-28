@@ -6,8 +6,8 @@ jangan lupa install dan jalankan docker pada laptop/pc, lalu clone folder github
 - **kedua**
 silahkan pull docker berikut: (optional)
 
-- `docker pull karakuzen/site-195410096`
-- `docker pull karakuzen/php-195410096`
+`docker pull karakuzen/site-195410096`
+`docker pull karakuzen/php-195410096`
 
 perintah kedua bersifat optional karena docker-compose akan pull image dengan sendirinya jika image tidak ada pada laptop/pc,
 
