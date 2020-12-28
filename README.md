@@ -15,7 +15,7 @@ choose directory ke new_posty `cd new_posty`
 
 ## up
 
-up docker-compose, perintah **up** adalah menjalankan perintah untuk membuat container, networks, image, volumes yang tertera pada `docker-compose.yml`. `docker-compose up -d --build site`,  **-d** adalah detach, menjalankan container di background, lalu mencetak nama container baru. **--build** membuat image sebelum memulai container.
+up docker-compose, perintah **up** adalah menjalankan perintah untuk membuat container, networks, image, volumes yang tertera pada `docker-compose.yml`. `docker-compose up -d --build site` => `-d` adalah detach, menjalankan container di background, lalu mencetak nama container baru. `--build` membuat image sebelum memulai container.
 
 nama container yang berjalan berserta port:
 - **nginx** - `:8080`
