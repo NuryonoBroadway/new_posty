@@ -24,7 +24,7 @@ up docker-compose, perintah **up** adalah menjalankan perintah untuk membuat con
 `docker-compose up -d --build site` => `-d` adalah detach, menjalankan container di background, lalu mencetak nama container baru. `--build` membuat image sebelum memulai container.
 
 
-setelah up cek di browser, `localhost:8080`, setelah berhasil akses `localhost:8080`, run `docker-compose run --rm artisan migrate`, untuk migrate table ke database mysql, jika tidak maka akan muncul error.
+setelah up cek di browser, `localhost:8080`, setelah berhasil akses `localhost:8080`, run `docker-compose run --rm artisan migrate`, untuk migrate table ke database mysql, jika tidak maka akan muncul error saat register atau login, jika sudah run maka fungsi login dan register akan berfungsi.
 
 nama container yang berjalan berserta port:
 - **nginx** - `:8080`
