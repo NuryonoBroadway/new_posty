@@ -20,6 +20,8 @@ services:
   mysql:
     image: mysql:5.7.29
     container_name: mysql
+    volumes:
+      - ./mysql:/var/lib/mysql
     restart: unless-stopped
     tty: true
     ports:
@@ -32,9 +34,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     networks:
-      - laravel
-    volumes:
-      - ./mysql:/var/lib/mysql	
+      - laravel	
 
   php:
     image: karakuzen/php-195410096:latest
